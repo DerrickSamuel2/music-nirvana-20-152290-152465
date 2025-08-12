@@ -2,6 +2,17 @@
   "name": "music-nirvana-ui",
   "version": "1.0.0",
   "private": true,
+  "description": "Music Nirvana 2.0 Web/Mobile User Interface",
+  "author": "",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src --ext .js,.jsx",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\"",
+    "postinstall": "node -e \"try{ require('fs').accessSync('./node_modules'); }catch(_){ process.exit(1); }\""
+  },
   "dependencies": {
     "@mui/icons-material": "^5.15.0",
     "@mui/material": "^5.15.0",
@@ -12,10 +23,21 @@
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  }
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-config-react-app": "^7.0.1",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=16 <=20",
+    "npm": ">=7"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not < 0.2%",
+    "not ie 11"
+  ]
 }
